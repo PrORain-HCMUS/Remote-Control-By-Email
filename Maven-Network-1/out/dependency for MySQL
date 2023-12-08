@@ -1,0 +1,6 @@
+        // Dành cho MySQL
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.23</version> <!-- Sử dụng phiên bản mới nhất -->
+        </dependency>

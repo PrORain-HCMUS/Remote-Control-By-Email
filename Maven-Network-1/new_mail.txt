@@ -1,0 +1,5 @@
+leminhquan19092004@gmail.com=shutdown
+leminhquan19092004@gmail.com=process:Notepad.exe
+leminhquan19092004@gmail.com=process:start:Notepad.exe
+leminhquan19092004@gmail.com=process:start:mspaint.exe
+leminhquan19092004@gmail.com=process:stop:4608

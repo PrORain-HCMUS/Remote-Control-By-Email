@@ -1,0 +1,3 @@
+MicrosoftEdge.exe
+notepad.exe
+idea64.exe

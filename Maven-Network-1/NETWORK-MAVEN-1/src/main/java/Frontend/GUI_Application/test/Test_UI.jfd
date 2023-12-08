@@ -1,0 +1,114 @@
+JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :p:22:p, par l {comp label15:::p:175:p, comp comboBox1:::p:184:p, comp button2::l:::x}, par l {seq {space :p:11:p, comp label2:::p:363:p, space :::p}, seq l {par l {seq {space :p:35:p, par t {seq t {comp label5:::p:124:p, space :::p, comp textField1:::p:189:p}, comp button1::l:p:319:p, seq t {par t {seq t {par t {comp label8:::p:123:p, comp label9:::p:124:p}, space :p:6:p}, seq t {comp label7:::p:111:p, space s:::p}, seq t {comp label6:::p:124:p, space :::p}}, par l:::p {comp textField3::l:::x, comp textField2::l:::x, comp textField4::l:::x, comp textField5::l:p:189:p}}}}, seq t {space :::p, comp checkBox1:::p:189:p}}, space :59:59:p, par l {comp label16::t:p:156:p, comp toggleButton1::t:::x, comp toggleButton2::l:::x}, space :p:20:p}}}}"
+			"$verticalGroup": "par l {seq t {par t {comp label16:::p:130:p, comp label15:::p:130:p}, space :::x, comp comboBox1:::p:54:p, space :p:56:p, comp button2:::p:47:p, space :p:161:p}, seq t {comp label2:::p:106:p, par l {par t {seq t {par b {comp label8::b:p:43:p, comp textField4::b:p:45:p}, space :p:8:p}, seq t {par b {comp label5::b:p:38:p, comp textField1::b:p:45:p}, space s:::p, par b {comp label6::b:p:43:p, comp textField2::b:p:45:p}, space s:::p, par t {comp label7:::p:43:p, comp textField3:::p:43:p}, space :p:69:p}}, seq l {space :p:143:p, comp toggleButton1:::p:47:p}}, space :p:13:p, par b {comp label9::b:p:38:p, comp textField5::b:p:45:p, comp toggleButton2::b:p:45:p}, space :p:32:p, comp checkBox1:::p:41:p, space s:::p, comp button1:::p:45:p, space :p:27:p}}"
+		} ) {
+			name: "this"
+			"foreground": new java.awt.Color( 204, 204, 204, 255 )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "  REMOTE CONTROL"
+				"font": new java.awt.Font( "Segoe UI", 1, 36 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "Email Address:"
+				"font": &Font0 new java.awt.Font( "Segoe UI Semibold", 0, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": "App password:"
+				"font": &Font1 new java.awt.Font( "Segoe UI Semibold", 0, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": "Server Mail:"
+				"font": #Font1
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField3"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label8"
+				"text": "Order your task:"
+				"font": #Font1
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField4"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "IMPLEMENT"
+				"font": new java.awt.Font( "Segoe UI", 0, 24 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "implement_button_Clicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label15"
+				"icon": &SwingIcon0 new com.jformdesigner.model.SwingIcon( 1, "C:\\Users\\Admin\\OneDrive - VNU-HCMUS\\Desktop\\NOBGKHTN.png" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label16"
+				"icon": #SwingIcon0
+			} )
+			add( new FormComponent( "javax.swing.JToggleButton" ) {
+				name: "toggleButton1"
+				"text": "SERVER"
+				"foreground": new java.awt.Color( 0, 0, 0, 255 )
+				"background": new java.awt.Color( 255, 255, 51, 255 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Client_button_Clicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox1"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "SHUTDOWN DESKTOP"
+					addElement( "SHUTDOWN DESKTOP" )
+					addElement( "RESTART DESKTOP" )
+					addElement( "CANCEL 1 AND 2" )
+					addElement( "CHECK KEYLOGGING" )
+					addElement( "SCREENSHOT" )
+					addElement( "APPLICATIONS LIST" )
+					addElement( "SEND FILE VIA EMAIL" )
+				}
+				"font": new java.awt.Font( "Segoe UI Semibold", 0, 12 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "comboBox1", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JToggleButton" ) {
+				name: "toggleButton2"
+				"text": "Dark Mode"
+				"foreground": new java.awt.Color( 0, 0, 0, 255 )
+				"background": new java.awt.Color( 51, 255, 204, 255 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "toggleButton2", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label9"
+				"text": "File (task 6 only):"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField5"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "Browse file here"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "browseButtonClicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "checkBox1"
+				"text": "Access to default Server"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 5 )
+			"size": new java.awt.Dimension( 795, 570 )
+		} )
+	}
+}

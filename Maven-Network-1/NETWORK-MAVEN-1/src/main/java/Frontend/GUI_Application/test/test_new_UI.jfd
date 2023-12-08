@@ -1,0 +1,89 @@
+JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :p:22:p, par l {comp label15:::p:175:p, comp comboBox1:::p:184:p}, par l {seq l {space :p:35:p, par l {seq l {par t {seq t {comp label5:::p:124:p, space :::x, comp label16:::p:156:p}, seq l {comp label7:::p:143:p, space :0:0:x}, seq l {comp textField2:::p:319:p, space :p:34:p, comp toggleButton1::::172:x, space :p:9:p}}, space :p:20:p}, seq l {par l {comp textField3::l:p:319:p, comp label8::l:p:143:p, comp textField4::l:p:319:p, comp button1::l:p:319:p, comp textField1::l:p:319:p, comp label6::l:p:143:p}, space :136:235:x}}}, seq {space :p:11:p, comp label2:::p:363:p, space :::p}}}}"
+			"$verticalGroup": "par l {seq t {par t {seq {space :0:0:x, comp toggleButton1:::p:53:p}, seq {par t {comp label16:::p:130:p, seq {comp label2:::p:106:p, space u:::p, comp label5:::p:38:p}, comp label15:::p:130:p}, space s:::x, comp textField1:::p:45:p, space :0:0:p, par l {seq {comp label6:::p:43:p, space :::p, comp textField2:::p:45:p, space :0:0:x}, seq t {space :0:0:x, comp comboBox1:::p:54:p}}}}, space :::p, comp label7:::p:43:p, space :::p, comp textField3:::p:45:p, space :::p, comp label8:::p:43:p, space :::p, comp textField4:::p:45:p, space u:::p, comp button1:::p:45:p, space :12:12:p}}"
+		} ) {
+			name: "this"
+			"foreground": new java.awt.Color( 204, 204, 204, 255 )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "  REMOTE CONTROL"
+				"font": new java.awt.Font( "Segoe UI", 1, 36 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "Email Address:"
+				"font": new java.awt.Font( "Segoe UI Semibold", 0, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": "App password:"
+				"font": &Font0 new java.awt.Font( "Segoe UI Semibold", 0, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": "Objective Address:"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField3"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label8"
+				"text": "Order your task:"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField4"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "IMPLEMENT"
+				"font": new java.awt.Font( "Segoe UI", 0, 24 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "implement_button_Clicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label15"
+				"icon": &SwingIcon0 new com.jformdesigner.model.SwingIcon( 1, "C:\\Users\\Admin\\OneDrive - VNU-HCMUS\\Desktop\\NOBGKHTN.png" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label16"
+				"icon": #SwingIcon0
+			} )
+			add( new FormComponent( "javax.swing.JToggleButton" ) {
+				name: "toggleButton1"
+				"text": "CLIENT"
+				"foreground": new java.awt.Color( 0, 0, 0, 255 )
+				"background": new java.awt.Color( 255, 255, 51, 255 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Client_button_Clicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox1"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "SHUTDOWN DESKTOP"
+					addElement( "SHUTDOWN DESKTOP" )
+					addElement( "RESTART DESKTOP" )
+					addElement( "CANCEL 1 AND 2" )
+					addElement( "CHECK KEYLOGGING" )
+					addElement( "SCREENSHOT" )
+					addElement( "SEND FILE VIA EMAIL" )
+				}
+				"font": new java.awt.Font( "Segoe UI Semibold", 0, 12 )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 70, 10 )
+			"size": new java.awt.Dimension( 795, 570 )
+		} )
+	}
+}
+

@@ -1,0 +1,84 @@
+JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:22:p, par l {seq {comp comboBox1:::p:184:p, space :p:35:p, par t {seq t {space :0:0:x, comp label16:::p:156:p}, seq l {par t {comp label6::l:p:143:p, seq l {par l {par l:l::p {comp button1::l::319:x, comp checkBox1::l::319:x, comp textField3::l::319:x}, comp label7::l:p:143:p, comp textField2::l:p:319:p}, space :p:43:p, par l {comp toggleButton1:::p:172:p, comp toggleButton2:::p:172:p}}}, space :0:0:x}}, space :p:20:p}, seq {comp label15:::p:175:p, space :p:20:p, comp label2:::p:363:p, space :::p}}}}"
+			"$verticalGroup": "par l {seq {par t {comp label16:::p:130:p, seq {comp label2:::p:106:p, space :p:50:p}, comp label15:::p:130:p}, par l {seq l {space :p:25:p, comp label6:::p:43:p, space u:::p, par b {comp toggleButton1::b:p:45:p, comp comboBox1::b:p:54:p, comp textField2::b::54:x}, space ::128:x, comp checkBox1:::p:33:p, space :p:30:p, comp button1:::p:45:p, space :p:43:p}, seq l {space :::x, comp label7:::p:43:p, space :::p, par l:::p {comp toggleButton2::::51:x, comp textField3::::51:x}, space :p:170:p}}}}"
+		} ) {
+			name: "this2"
+			"foreground": new java.awt.Color( 204, 204, 204, 255 )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "  REMOTE CONTROL"
+				"font": new java.awt.Font( "Segoe UI", 1, 36 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": "Client Email:"
+				"font": &Font0 new java.awt.Font( "Segoe UI Semibold", 0, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": "App password:"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField3"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "IMPLEMENT"
+				"font": new java.awt.Font( "Segoe UI", 0, 24 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "implement_button_Clicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label15"
+				"icon": &SwingIcon0 new com.jformdesigner.model.SwingIcon( 1, "C:\\Users\\Admin\\OneDrive - VNU-HCMUS\\Desktop\\NOBGKHTN.png" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label16"
+				"icon": #SwingIcon0
+			} )
+			add( new FormComponent( "javax.swing.JToggleButton" ) {
+				name: "toggleButton1"
+				"text": "SERVER"
+				"foreground": new java.awt.Color( 0, 0, 0, 255 )
+				"background": new java.awt.Color( 0, 204, 204, 255 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "Server_button_Clicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "checkBox1"
+				"text": "Accept to give permission to Server"
+			} )
+			add( new FormComponent( "javax.swing.JToggleButton" ) {
+				name: "toggleButton2"
+				"text": "Dark Mode"
+				"foreground": new java.awt.Color( 0, 0, 0, 255 )
+				"background": new java.awt.Color( 51, 255, 204, 255 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "toggleButton2", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox1"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "SHUTDOWN DESKTOP"
+					addElement( "SHUTDOWN DESKTOP" )
+					addElement( "RESTART DESKTOP" )
+					addElement( "CANCEL 1 AND 2" )
+					addElement( "CHECK KEYLOGGING" )
+					addElement( "SCREENSHOT" )
+					addElement( "SEND FILE VIA EMAIL" )
+				}
+				"font": new java.awt.Font( "Segoe UI Semibold", 0, 12 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "comboBox1", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 795, 570 )
+		} )
+	}
+}
