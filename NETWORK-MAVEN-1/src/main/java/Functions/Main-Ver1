@@ -1,0 +1,34 @@
+package Functions;
+
+import Functions.SendReceiveMail;
+import Database.DatabaseManager;
+
+public class Main {
+
+    public static void main(String[] args) {
+        final String username = "maytinhmang447@gmail.com";
+        final String password = "ggat sxwp mrvx tlof"; // App password
+
+        // Tạo một đối tượng DatabaseManager
+        DatabaseManager databaseManager = new DatabaseManager();
+
+        // Đăng ký người dùng
+        boolean registrationStatus = databaseManager.registerUser(username, password);
+        if (registrationStatus) {
+            System.out.println("Đăng ký người dùng thành công!");
+        } else {
+            System.out.println("Đăng ký người dùng thất bại!");
+        }
+
+        // Xác thực người dùng
+        boolean authenticationStatus = databaseManager.authenticateUser(username, password);
+        if (authenticationStatus) {
+            System.out.println("Xác thực người dùng thành công!");
+        } else {
+            System.out.println("Xác thực người dùng thất bại!");
+        }
+
+        // Gửi và nhận email (sử dụng SendReceiveMail)
+        SendReceiveMail.sendAndReceiveMail(username, password, "maytinhmang060@gmail.com");
+    }
+}

@@ -1,0 +1,82 @@
+package Functions;
+
+import Functions.SendReceiveMail;
+import Database.DatabaseManager;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Main {
+    private DatabaseManager databaseManager = new DatabaseManager();
+    private JFrame frame;
+    private JTextField usernameField;
+    private JPasswordField passwordField;
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            new Main().createAndShowGUI();
+        });
+    }
+
+    private void createAndShowGUI() {
+        frame = new JFrame("File Sharing Application");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 250);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(5, 2));
+
+        JLabel nameLabel = new JLabel("Tên người dùng (Email):");
+        usernameField = new JTextField();
+        JLabel passwordLabel = new JLabel("Mật khẩu:");
+        passwordField = new JPasswordField();
+        JButton loginButton = new JButton("Đăng nhập");
+        JButton registerButton = new JButton("Đăng ký");
+
+        panel.add(nameLabel);
+        panel.add(usernameField);
+        panel.add(passwordLabel);
+        panel.add(passwordField);
+        panel.add(new JLabel()); // Dòng trống
+        panel.add(new JLabel()); // Dòng trống
+        panel.add(loginButton);
+        panel.add(registerButton);
+
+        frame.add(panel);
+
+        registerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String username = usernameField.getText();
+                char[] password = passwordField.getPassword();
+
+                if (databaseManager.registerUser(username, new String(password))) {
+                    JOptionPane.showMessageDialog(frame, "Đăng ký thành công!");
+                } else {
+                    JOptionPane.showMessageDialog(frame, "Tên người dùng đã tồn tại!");
+                }
+            }
+        });
+
+        loginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String username = usernameField.getText();
+                char[] password = passwordField.getPassword();
+
+                if (databaseManager.authenticateUser(username, new String(password))) {
+                    JOptionPane.showMessageDialog(frame, "Xác thực thành công!");
+
+                    // Gửi và nhận email
+                    SendReceiveMail.sendAndReceiveMail(username, new String(password), "maytinhmang060@gmail.com");
+                } else {
+                    JOptionPane.showMessageDialog(frame, "Xác thực thất bại!");
+                }
+            }
+        });
+
+        frame.setVisible(true);
+    }
+}
